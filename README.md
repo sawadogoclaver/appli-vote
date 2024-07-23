@@ -5,7 +5,7 @@ Appli de vote pour tester l'orchestration de conteneurs avec docker-compose
 
 Cette application permet aux utilisateurs de voter pour la monogamie ou la polygamie et de voir les résultats.
 
-Elle est composées des services suivants:
+Elle est composée des services suivants:
 - PHP : Application de vote.
 - Node.js : Application de résultats.
 - PostgreSQL : Base de données pour stocker les votes.
@@ -29,5 +29,5 @@ L'application doit etre conteneurisé pour etre lancé directement avec la comma
 
 Cela va démarrer les services et vous pourrez accéder à l'application via :
 
--PHP (Vote) : http://localhost:8080
--Node.js (Résultats) : http://localhost:3001
+- PHP (Vote) : http://localhost:8080
+- Node.js (Résultats) : http://localhost:3001
