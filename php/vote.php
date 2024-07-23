@@ -3,15 +3,23 @@
 $vote = $_POST['vote'] ?? null;
 
 if ($vote) {
-    $manager = new MongoDB\Driver\Manager("mongodb://mongo:27017");
-    $bulk = new MongoDB\Driver\BulkWrite;
+    $host = getenv('POSTGRES_HOST');
+    $dbname = getenv('POSTGRES_DB');
+    $user = getenv('POSTGRES_USER');
+    $password = getenv('POSTGRES_PASSWORD');
 
-    $bulk->insert(['vote' => $vote]);
+    try {
+        $dsn = "pgsql:host=$host;dbname=$dbname";
+        $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
-    $manager->executeBulkWrite('voteapp.votes', $bulk);
+        $stmt = $pdo->prepare("INSERT INTO votes (vote_option) VALUES (:vote)");
+        $stmt->execute(['vote' => $vote]);
 
-    echo "<p>Merci d'avoir voté pour : $vote</p>";
-    echo "<a href='index.php'>Retourner au formulaire de vote</a>";
+        echo "<p>Merci d'avoir voté pour : $vote</p>";
+        echo "<a href='index.php'>Retourner au formulaire de vote</a>";
+    } catch (PDOException $e) {
+        echo "<p>Erreur de connexion à la base de données : " . $e->getMessage() . "</p>";
+    }
 } else {
     echo "<p>Aucun vote sélectionné. Veuillez voter.</p>";
     echo "<a href='index.php'>Retourner au formulaire de vote</a>";
