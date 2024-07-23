@@ -18,4 +18,4 @@ Cette application permet aux utilisateurs de voter pour la monogamie ou la polyg
 
 ```sh
 git clone https://github.com/votre-utilisateur/vote-app.git
-cd vote-app
+cd appli-vote
