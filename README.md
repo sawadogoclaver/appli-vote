@@ -40,3 +40,6 @@ Cela va démarrer les services et vous pourrez accéder à l'application via :
 - Node.js (Résultats) : http://localhost:3001
 
 Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
+
+Le projet devra à terme avoir la struture suivante:
+![Capture d'écran 2024-07-23 172847](https://github.com/user-attachments/assets/facad7d5-4aab-4e5a-896e-3bef7b6b0da4)
