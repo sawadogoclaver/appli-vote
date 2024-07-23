@@ -1,0 +1,13 @@
+{
+  "name": "results-app",
+  "version": "1.0.0",
+  "description": "Application pour afficher les résultats des votes",
+  "main": "results.js",
+  "scripts": {
+    "start": "node results.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.6"
+  }
+}
