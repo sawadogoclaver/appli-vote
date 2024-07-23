@@ -13,6 +13,11 @@ Elle est composée des services suivants:
 La base de données devra etre persistée en local pour garder les enciens votes.
 
 ## Configuration
+Le fichier init.sql à la racine du projet permet d'initialiser la base de données avec la table des votes.
+Le fichier index.php contient le formulaire HTML simple pour le vote.
+Le fichier vote.php traite les votes et les stocke dans PostgreSQL.
+Le fichier package.json contient les dépendances Node.js.
+Le fichier results.js récupére et affiche les résultats des votes.
 
 ### Prérequis
 
