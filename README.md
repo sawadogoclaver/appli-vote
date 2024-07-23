@@ -33,3 +33,5 @@ Cela va démarrer les services et vous pourrez accéder à l'application via :
 
 - PHP (Vote) : http://localhost:8080
 - Node.js (Résultats) : http://localhost:3001
+
+Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
