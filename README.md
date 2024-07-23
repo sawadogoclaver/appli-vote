@@ -10,6 +10,8 @@ Elle est composée des services suivants:
 - Node.js : Application de résultats.
 - PostgreSQL : Base de données pour stocker les votes.
 
+La base de données devra etre persistée en local pour garder les enciens votes.
+
 ## Configuration
 
 ### Prérequis
