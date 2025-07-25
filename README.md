@@ -29,17 +29,20 @@ La base de données devra etre persistée en local pour garder les enciens votes
 1. Clonez le dépôt :
 
 ```sh
-git clone https://github.com/votre-utilisateur/vote-app.git
+git clone https://github.com/sawadogoclaver/vote-app.git
 cd appli-vote
 ```
 L'application doit etre conteneurisé pour etre lancé directement avec la commande: docker-compose up --build
+Le service node devra avoir un fichier dockerfile pour compiler l'image du conteneur;
+le service php ne devra pas contenir de dockerfile, son image sera directement utilisé dans le docker-compose
 
-Cela va démarrer les services et vous pourrez accéder à l'application via :
+Cela va démarrer les services et vous pourrez accéder à l'application via (veillez respecter les numeros de port):
 
 - PHP (Vote) : http://localhost:8080
-- Node.js (Résultats) : http://localhost:3001
+- Node.js (Résultats) : http://localhost:3005
 
 Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
 
 Le projet devra à terme avoir la struture suivante:
-![Capture d'écran 2024-07-23 172847](https://github.com/user-attachments/assets/facad7d5-4aab-4e5a-896e-3bef7b6b0da4)
+<img width="622" height="744" alt="Capture d'écran 2025-07-25 115652" src="https://github.com/user-attachments/assets/39073666-f84b-4865-a4f7-6700e1864f36" />
+
