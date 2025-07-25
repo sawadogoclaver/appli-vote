@@ -13,7 +13,7 @@ Elle est composée des services suivants:
 La base de données devra etre persistée en local pour garder les enciens votes.
 
 ## Configuration
-- Le fichier init.sql à la racine du projet permet d'initialiser la base de données avec la table des votes.
+- Le fichier init.sql dans le dossier db du projet permet d'initialiser la base de données avec la table des votes.
 - Le fichier index.php contient le formulaire HTML simple pour le vote.
 - Le fichier vote.php traite les votes et les stocke dans PostgreSQL.
 - Le fichier package.json contient les dépendances Node.js.
@@ -44,5 +44,5 @@ Cela va démarrer les services et vous pourrez accéder à l'application via (v
 Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
 
 Le projet devra à terme avoir la struture suivante:
-<img width="622" height="744" alt="Capture d'écran 2025-07-25 115652" src="https://github.com/user-attachments/assets/39073666-f84b-4865-a4f7-6700e1864f36" />
+<img width="522" height="544" alt="Structure du projet" src="https://github.com/user-attachments/assets/39073666-f84b-4865-a4f7-6700e1864f36" />
 
