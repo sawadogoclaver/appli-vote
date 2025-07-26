@@ -1,5 +1,5 @@
 # appli-vote
-Appli de vote pour tester l'orchestration de conteneurs avec docker-compose
+Appli de vote pour tester l'orchestration de conteneurs avec docker-compose et kubernates!
 
 ## Description
 
@@ -32,17 +32,23 @@ La base de données devra etre persistée en local pour garder les enciens votes
 git clone https://github.com/sawadogoclaver/vote-app.git
 cd appli-vote
 ```
-L'application doit etre conteneurisé pour etre lancé directement avec la commande: docker-compose up --build
-Le service node devra avoir un fichier dockerfile pour compiler l'image du conteneur;
-le service php ne devra pas contenir de dockerfile, son image sera directement utilisé dans le docker-compose
+2. L'application doit etre conteneurisé pour etre lancé directement avec la commande: docker-compose up --build
+```Le service node devra avoir un fichier dockerfile pour compiler l'image du conteneur;
+le service php ne devra pas contenir de dockerfile, son image sera directement utilisé dans le docker-compose.
 
 Cela va démarrer les services et vous pourrez accéder à l'application via (veillez respecter les numeros de port):
 
 - PHP (Vote) : http://localhost:8080
 - Node.js (Résultats) : http://localhost:3005
 
+```
+3. Ensuite ajouter la configuration kubernates pour gerer le lancement automatique des conteneurs et créez 2 instances de l'application de vote en PHP.
+   ```
+   Lancez l'application à partir de kubernates!
+
 Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
 
 Le projet devra à terme avoir la struture suivante:
-<img width="522" height="544" alt="Structure du projet" src="https://github.com/user-attachments/assets/39073666-f84b-4865-a4f7-6700e1864f36" />
+<img width="500" height="544" alt="Structure du projet" src="https://github.com/user-attachments/assets/a7cd2e60-2b89-4d0f-9829-38a607bc031d" />
+
 
