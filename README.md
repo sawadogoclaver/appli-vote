@@ -29,7 +29,7 @@ La base de données devra etre persistée en local pour garder les enciens votes
 1. Clonez le dépôt :
 
 ```sh
-git clone https://github.com/sawadogoclaver/vote-app.git
+git clone https://github.com/sawadogoclaver/appli-vote.git
 cd appli-vote
 ```
 2. L'application doit etre conteneurisé pour etre lancé directement avec la commande: docker-compose up --build
@@ -43,8 +43,8 @@ Cela va démarrer les services et vous pourrez accéder à l'application via (v
 
 ```
 3. Ensuite ajouter la configuration kubernates pour gerer le lancement automatique des conteneurs et créez 2 instances de l'application de vote en PHP.
-   ```
-   Lancez l'application à partir de kubernates!
+```
+Lancez l'application à partir de kubernates!
 
 Cette version du projet utilise PostgreSQL pour stocker les votes, et démontre comment utiliser Docker pour gérer plusieurs services avec différentes technologies.
 
